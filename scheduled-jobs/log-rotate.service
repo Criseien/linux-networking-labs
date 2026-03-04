@@ -1,0 +1,14 @@
+[Unit]
+Description=Rotate Application Logs
+# Ensure the script exists before trying to run
+ConditionPathExists=/usr/local/bin/rotate_logs.sh
+
+[Service]
+# 'oneshot' is used for scripts that perform a task and سپس exit
+Type=oneshot
+ExecStart=/usr/bin/bash /usr/local/bin/rotate_logs.sh
+# Optional: Run as a specific non-root user for security
+# User=app-user
+
+[Install]
+WantedBy=multi-user.target

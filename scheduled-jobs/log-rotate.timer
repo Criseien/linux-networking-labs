@@ -1,0 +1,15 @@
+[Unit]
+Description=Run log rotation daily at 2am
+
+[Timer]
+# Syntax: DayOfWeek Year-Month-Day Hour:Minute:Second
+OnCalendar=*-*-* 02:00:00
+
+# Critical: If the server was off at 2am, run it immediately on boot
+Persistent=true
+
+# Unit this timer triggers. If omitted, it looks for the same name .service
+Unit=log-rotate.service
+
+[Install]
+WantedBy=timers.target
