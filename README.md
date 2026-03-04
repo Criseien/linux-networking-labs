@@ -24,13 +24,13 @@ These labs are building that second skill set.
 | firewalld / nftables | [firewalld/](./firewalld/) | Node firewall vs NetworkPolicies |
 | DNS Resolution | [dns/](./dns/) | CoreDNS, pod DNS policy |
 | NAT & Masquerading | [nat/](./nat/) | Pod-to-internet, NodePort DNAT |
-
+| File Permissions & ACLs | [file-permissions/](file-permissions/) | Volume permissions, security contexts |
 ### 🔄 In Progress
 
 | Topic | Status |
 |-------|--------|
 | Boot Process & GRUB | Lab pending |
-| File Permissions & ACLs | Starting this week |
+
 
 ### 📋 Roadmap
 
