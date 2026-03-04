@@ -1,0 +1,35 @@
+# sshd_config - Hardened example
+# Apply changes in order to avoid locking yourself out.
+# After editing: sshd -T to verify, then systemctl reload sshd (not restart).
+
+# --- Authentication ---
+
+# Disable direct root login. Root access via sudo after login only.
+PermitRootLogin no
+
+# Disable password authentication. SSH keys only.
+# WARNING: Set up and validate key-based auth BEFORE enabling this.
+PasswordAuthentication no
+
+# Restrict which users can SSH into this host.
+# Add only users that legitimately need remote access.
+AllowUsers deploy-user cristian
+
+# Disable empty passwords (defense in depth).
+PermitEmptyPasswords no
+
+# --- Port ---
+
+# Default is 22. Changing port is security through obscurity — reduces
+# noise in logs but is not a real security control. Only change if your
+# security policy requires it. If you change it, update firewalld too.
+Port 22
+
+# --- Session ---
+
+# Disconnect idle sessions after 5 minutes (300s), 2 check intervals.
+ClientAliveInterval 300
+ClientAliveCountMax 2
+
+# Limit login attempts per connection.
+MaxAuthTries 3
