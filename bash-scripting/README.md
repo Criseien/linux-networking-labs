@@ -18,7 +18,7 @@ When a node goes `NotReady` or a legacy service degrades silently, you need fast
 ### Usage
 Requires elevated permissions to read system logs:
 ```
-bashchmod +x log-counter.sh
+bash chmod +x log-counter.sh
 sudo ./log-counter.sh  # scans /var/log/*.log by default
 ```
 Expected output: one line per file showing total lines and error count.
