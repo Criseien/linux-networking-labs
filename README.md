@@ -18,25 +18,30 @@ These labs are building that second skill set.
 ### ✅ Completed
 
 | Topic | Lab | K8s Connection |
-|-------|-----|----------------|
-| Network Namespaces | [namespaces/](./namespaces/) | How pods are isolated |
-| iptables Chains | [iptables/](./iptables/) | kube-proxy under the hood |
-| firewalld / nftables | [firewalld/](./firewalld/) | Node firewall vs NetworkPolicies |
-| DNS Resolution | [dns/](./dns/) | CoreDNS, pod DNS policy |
-| NAT & Masquerading | [nat/](./nat/) | Pod-to-internet, NodePort DNAT |
-| File Permissions & ACLs | [file-permissions/](./file-permissions/) | Volume permissions, security contexts |
-| Bash Scripting | [bash-scripting/](./bash-scripting/) | Node triage automation, CronJob scripts |
+| --- | --- | --- |
+| Network Namespaces | [namespaces/](namespaces/) *(docs pending)* | How pods are isolated |
+| iptables Chains | [iptables/](iptables/) *(docs pending)* | kube-proxy under the hood |
+| firewalld / nftables | [firewalld/](firewalld/) *(docs pending)* | Node firewall vs NetworkPolicies |
+| DNS Resolution | [dns/](dns/) *(docs pending)* | CoreDNS, pod DNS policy |
+| NAT & Masquerading | [nat/](nat/) *(docs pending)* | Pod-to-internet, NodePort DNAT |
+| File Permissions & ACLs | [file-permissions/](file-permissions/) | Volume permissions, security contexts |
+| SSH Hardening | [ssh-hardening/](ssh-hardening/) | Node access, bastion hosts |
+| Scheduled Jobs (cron + systemd timers) | [scheduled-jobs/](scheduled-jobs/) | CronJobs, cert rotation timers |
+| Bash Scripting | [bash-scripting/](bash-scripting/) | Node triage automation, CronJob scripts |
+| Package Management (dnf/rpm) | [package-management/](package-management/) | Installing CNI plugins, kubelet, containerd |
+| find & Text Processing | [find-text-processing/](find-text-processing/) | Log analysis, config file grep |
 
 ### 🔄 In Progress
 
 | Topic | Status |
-|-------|--------|
-| Boot Process & GRUB | Lab pending |
+| --- | --- |
+| SELinux | Lab pending — returning after warm-up degradation |
+| Boot Process & GRUB | Lab pending (UTM console setup) |
 
 ### 📋 Roadmap
 
 | Topic | Phase |
-|-------|-------|
+| --- | --- |
 | Container internals (no Docker) | F1.5 |
 | Docker networking internals | F2 |
 | K8s networking model | F2 |
@@ -56,5 +61,19 @@ Deep-dive articles on everything here: [icris.me](https://icris.me)
 
 ---
 
-*Building K8s Networking expertise from the ground up.*
+*Building K8s Networking expertise from the ground up.*  
 *Platform Engineer specializing in networking & troubleshooting.*
+```
+
+---
+
+**Dos cambios clave respecto al original:**
+1. Todos los topics dominados están en la tabla — incluyendo los 6 folders que sí existen y los 5 de networking con `*(docs pending)*`
+2. SELinux y Boot/GRUB movidos a "In Progress" — honesto con el estado real
+
+**Commit message para esto:**
+```
+docs(readme): sync completed topics with actual lab status
+
+add all 11 completed topics to table, mark networking labs as
+docs pending, move selinux and grub to in-progress
