@@ -66,14 +66,3 @@ Deep-dive articles on everything here: [icris.me](https://icris.me)
 ```
 
 ---
-
-**Dos cambios clave respecto al original:**
-1. Todos los topics dominados están en la tabla — incluyendo los 6 folders que sí existen y los 5 de networking con `*(docs pending)*`
-2. SELinux y Boot/GRUB movidos a "In Progress" — honesto con el estado real
-
-**Commit message para esto:**
-```
-docs(readme): sync completed topics with actual lab status
-
-add all 11 completed topics to table, mark networking labs as
-docs pending, move selinux and grub to in-progress
