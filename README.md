@@ -19,24 +19,26 @@ These labs are building that second skill set.
 
 | Topic | Lab | K8s Connection |
 | --- | --- | --- |
-| Network Namespaces | [namespaces/](namespaces/) *(docs pending)* | How pods are isolated |
-| iptables Chains | [iptables/](iptables/) *(docs pending)* | kube-proxy under the hood |
-| firewalld / nftables | [firewalld/](firewalld/) *(docs pending)* | Node firewall vs NetworkPolicies |
-| DNS Resolution | [dns/](dns/) *(docs pending)* | CoreDNS, pod DNS policy |
-| NAT & Masquerading | [nat/](nat/) *(docs pending)* | Pod-to-internet, NodePort DNAT |
+| Network Namespaces | [namespaces/](namespaces/) | How pods are isolated |
+| iptables Chains & Rules | [iptables/](iptables/) | kube-proxy iptables mode, KUBE-SVC-* chains |
+| firewalld / nftables | [firewalld/](firewalld/) | Node firewall, bare-metal K8s port rules |
+| DNS Resolution | [dns/](dns/) | CoreDNS, pod DNS policy, ndots, search domains |
+| NAT & Masquerading | [nat/](nat/) | Pod-to-internet SNAT, NodePort DNAT |
 | File Permissions & ACLs | [file-permissions/](file-permissions/) | Volume permissions, security contexts |
+| SELinux | [selinux/](selinux/) | Pod security contexts, container label enforcement |
 | SSH Hardening | [ssh-hardening/](ssh-hardening/) | Node access, bastion hosts |
 | Scheduled Jobs (cron + systemd timers) | [scheduled-jobs/](scheduled-jobs/) | CronJobs, cert rotation timers |
 | Bash Scripting | [bash-scripting/](bash-scripting/) | Node triage automation, CronJob scripts |
 | Package Management (dnf/rpm) | [package-management/](package-management/) | Installing CNI plugins, kubelet, containerd |
 | find & Text Processing | [find-text-processing/](find-text-processing/) | Log analysis, config file grep |
+| NFS | [nfs/](nfs/) | PersistentVolumes, ReadWriteMany storage |
+| Git Workflow | [git-workflow/](git-workflow/) | GitOps, branch-per-feature, PR-based deployments |
 
 ### 🔄 In Progress
 
 | Topic | Status |
 | --- | --- |
-| SELinux | Lab pending — returning after warm-up degradation |
-| Boot Process & GRUB | Lab pending (UTM console setup) |
+| Boot Process & GRUB | Lab done — conceptual *(node rescue scenarios)* |
 
 ### 📋 Roadmap
 
@@ -61,8 +63,7 @@ Deep-dive articles on everything here: [icris.me](https://icris.me)
 
 ---
 
-*Building K8s Networking expertise from the ground up.*  
+*Building K8s Networking expertise from the ground up.*
 *Platform Engineer specializing in networking & troubleshooting.*
-```
 
 ---
